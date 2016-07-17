@@ -1,0 +1,38 @@
+.day-column{
+    width: 20%;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.earned-money-column{
+    width: 40%;
+}
+
+.spent-money-column{
+    width: 40%;
+    text-align: right;
+}
+
+.money-item{
+    margin: 1px;
+    display:inline-block;
+    font-size: 14px;
+}
+
+.spent-money-item{
+
+}
+
+.earned-money-item{
+
+}
+
+.money-item-row{
+    display:block;
+}
+
+.btn-add-money-item {
+    font-size: 9px;
+}

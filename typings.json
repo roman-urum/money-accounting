@@ -1,0 +1,8 @@
+{
+  "name": "auction",
+  "version": false,
+  "dependencies": {},
+  "ambientDependencies": {
+    "moment": "registry:dt/moment#2.8.0+20160316155526"
+  }
+}

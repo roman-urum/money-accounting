@@ -1,0 +1,38 @@
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Приход</th>
+                <th></th>
+                <th class="spent-money-column">Расход</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="#moneyDay of moneyDays">
+                <td сlass="earned-money-column">
+                    <div *ngFor="#moneyItem of moneyDay.earnedMoneyItems" class="money-item-row">
+                        <div class="money-item earned-money-item label label-success">
+                            {{moneyItem.amount}} грн. - {{moneyItem.tag}}
+                        </div>
+                    </div>
+                    <div class="money-item-row">
+                        <money-item-form (on-create-money-item)="onCreateEarnedMoneyItemHandler($event, moneyDay)"></money-item-form>
+                    </div>
+                </td>
+                <td class="day-column">
+                    {{moneyDay.date | date}}
+                </td>
+                <td class="spent-money-column">
+                    <div *ngFor="#moneyItem of moneyDay.spentMoneyItems" class="money-item-row">
+                        <div class="money-item earned-money-item label label-danger">
+                            {{moneyItem.amount}} грн. - {{moneyItem.tag}}
+                        </div>
+                    </div>
+                    <div class="money-item-row">
+                        <money-item-form (on-create-money-item)="onCreateSpentMoneyItemHandler($event, moneyDay)"></money-item-form>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

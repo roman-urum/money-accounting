@@ -1,0 +1,22 @@
+<form class="form-inline money-item-form" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+        <div class="input-group input-group-sm input-group-money-amount">
+            <input type="text"
+                   class="form-control input-sm input-money-amount"
+                   placeholder="00"
+                   ngControl="amount">
+            <span class="input-group-addon">грн.</span>
+        </div>
+
+        <select class="form-control input-sm" id="sel1" ngControl="tag">
+            <option>Шоппинг</option>
+            <option>Комуналка</option>
+            <option>Парковка</option>
+            <option>Квартира</option>
+        </select>
+
+        <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+        <button type="reset" class="btn btn-sm btn-default" (click)="onReset(f.value)">Очистить</button>
+
+     </div>
+</form>
